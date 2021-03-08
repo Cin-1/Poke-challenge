@@ -1,21 +1,22 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import image from "./images/poke1.jpg";
 import Header from "./Header";
 import ColorLang from "./ColorLang";
+import image2 from "./images/pokegroup.jpg";
+import NavBar from "./navBar";
+import image1 from "./images/poke1.jpg";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    color: "#FFD622",
+  options: {
     [theme.breakpoints.down("sm")]: {
       minHeight: "100vh",
-      backgroundColor: "rgb(254, 88, 88)",
+      backgroundImage: `url(${image1})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
     [theme.breakpoints.up("md")]: {
       minHeight: "100vh",
-      backgroundImage: `url(${image})`,
+      backgroundImage: `url(${image2})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -26,9 +27,12 @@ const Landing = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
+      <NavBar />
       <Header />
-      <ColorLang />
+      <div className={classes.options}>
+        <ColorLang />
+      </div>
     </div>
   );
 };

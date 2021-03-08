@@ -16,6 +16,7 @@ const useStyles = makeStyles({
       cursor: "pointer",
       borderColor: "red",
       padding: 5,
+      transition: "3000",
     },
   },
   media: {

@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
+    paddingTop: "1.5rem",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
@@ -35,7 +36,7 @@ export default function () {
         <ImageCard data={data[3]} checked={checked} />
       </div>
       <div className={classes.button}>
-        <Button color="primary" variant="contained">
+        <Button color="primary" variant="contained" size="large">
           GObgfctfgh!
         </Button>
       </div>

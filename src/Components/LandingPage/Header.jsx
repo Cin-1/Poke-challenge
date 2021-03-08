@@ -1,52 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, IconButton, Toolbar, Collapse } from "@material-ui/core";
-import SortIcon from "@material-ui/icons/Sort";
+import { IconButton, Collapse, Box } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link as Scroll } from "react-scroll";
+import image from "./images/pokedex.gif";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    fontFamily: "Nunito",
-  },
-  appbar: {
-    background: "none",
-  },
-  appbarWrapper: {
-    width: "80%",
-    margin: "0 auto",
-  },
-  appbarTitle: {
-    flexGrow: "1",
-    color: "#FFD622",
-  },
-  icon: {
-    color: "#FFD622",
-    fontSize: "2rem",
+    height: "105vh",
+    fontFamily: "Press Start 2P",
+    [theme.breakpoints.down("sm")]: {
+      height: "98vh",
+    },
   },
   colorText: {
     color: "#000000",
   },
-  container: {
-    textAlign: "center",
-  },
   title: {
-    textStroke: "#FFFFFF",
-    color: "#FFD622",
+    color: "#000000",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "2.5rem",
+      paddingTop: "10rem",
+      fontSize: "2rem",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "4rem",
+      fontSize: "3rem",
     },
   },
-  goDown: {
-    color: "#FFD622",
-    fontSize: "4rem",
+  arrow: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "3rem",
+    },
+  },
+  img: {
+    width: "90%",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "1.5rem",
+    },
   },
 }));
 export default function Header() {
@@ -57,33 +50,36 @@ export default function Header() {
   }, []);
   return (
     <div className={classes.root} id="header">
-      <AppBar className={classes.appbar} elevation={0}>
-        <Toolbar className={classes.appbarWrapper}>
-          <h1 className={classes.appbarTitle}>
-            Poke<span className={classes.colorText}>dex.</span>
-          </h1>
-          <IconButton>
-            <SortIcon className={classes.icon} />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1200 } : {})}
         collapsedHeight={50}
       >
-        <div className={classes.container}>
-          <h1 className={classes.title}>
-            Welcome to <br />
-            My<span className={classes.colorText}>PokeApp</span>
-          </h1>
+        <Box mt={-4}>
+          <Grid container>
+            <Grid container items sm={5}>
+              <Box display="flex" alignItems="center" ml={10}>
+                <h1
+                  className={classes.title}
+                  style={{ fontFamily: "Press Start 2P" }}
+                >
+                  Welcome to <br />
+                  My<span className={classes.colorText}>PokeApp</span>
+                </h1>
+              </Box>
+            </Grid>
+            <Grid container items sm={7}>
+              <img src={image} alt="pokedex" className={classes.img}></img>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box align="center" mt={-12}>
           <Scroll to="select-option" smooth={true}>
             <IconButton>
-              <ExpandMoreIcon className={classes.goDown} />
+              <ExpandMoreIcon className={classes.arrow} />
             </IconButton>
           </Scroll>
-        </div>
+        </Box>
       </Collapse>
     </div>
   );
