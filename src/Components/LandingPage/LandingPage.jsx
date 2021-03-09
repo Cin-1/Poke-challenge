@@ -5,6 +5,8 @@ import ColorLang from "./ColorLang";
 import image2 from "./images/pokegroup.jpg";
 import NavBar from "./navBar";
 import image1 from "./images/poke1.jpg";
+import { Button } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   options: {
@@ -25,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Landing = () => {
   const classes = useStyles();
+  const [t, i18n] = useTranslation("global");
 
   return (
     <div>

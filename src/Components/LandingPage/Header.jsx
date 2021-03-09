@@ -9,13 +9,12 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "105vh",
-    fontFamily: "Press Start 2P",
     [theme.breakpoints.down("sm")]: {
       height: "98vh",
     },
   },
   colorText: {
-    color: "#000000",
+    color: "rgb(220, 10, 45)",
   },
   title: {
     color: "#000000",
@@ -33,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("md")]: {
       fontSize: "3rem",
+      color: "#000000",
     },
   },
   img: {
@@ -59,10 +59,7 @@ export default function Header() {
           <Grid container>
             <Grid container items sm={5}>
               <Box display="flex" alignItems="center" ml={10}>
-                <h1
-                  className={classes.title}
-                  style={{ fontFamily: "Press Start 2P" }}
-                >
+                <h1 className={classes.title}>
                   Welcome to <br />
                   My<span className={classes.colorText}>PokeApp</span>
                 </h1>

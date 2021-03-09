@@ -1,18 +1,32 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import green from "@material-ui/core/colors/green";
+import grey from "@material-ui/core/colors/grey";
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
+    type: "light",
     primary: {
-      main: "rgb(121, 201, 250)",
+      main: green[300],
     },
     secondary: {
-      main: green[500],
+      main: grey[500],
     },
   },
   typography: {
-    fontFamily: "Press Start 2P",
+    fontFamily: "Odibee Sans",
   },
 });
-
-export default theme;
+export const themeDk = createMuiTheme({
+  palette: {
+    type: "dark",
+    primary: {
+      main: grey[500],
+    },
+    secondary: {
+      main: "rgb(121, 201, 250)",
+    },
+  },
+  typography: {
+    fontFamily: "Odibee Sans",
+  },
+});

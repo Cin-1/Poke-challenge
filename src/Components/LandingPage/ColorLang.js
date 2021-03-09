@@ -4,6 +4,8 @@ import ImageCard from "./ImageCard";
 import data from "../../static/data";
 import useWindowPosition from "../../hook/useWindowPosition";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,23 +24,47 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     paddingBottom: "2rem",
+    textDecoration: "none",
+  },
+  size: {
+    fontSize: "26px",
+    marginBottom: "1rem",
   },
 }));
-export default function () {
+export default function ColorLang() {
   const classes = useStyles();
   const checked = useWindowPosition("header");
+  const [t, i18n] = useTranslation("global");
+
   return (
     <>
       <div className={classes.root} id="select-option">
         <ImageCard data={data[0]} checked={checked} />
         <ImageCard data={data[1]} checked={checked} />
-        <ImageCard data={data[2]} checked={checked} />
-        <ImageCard data={data[3]} checked={checked} />
+        <ImageCard
+          data={data[2]}
+          checked={checked}
+          onClick={() => i18n.changeLanguage("eng")}
+        />
+        <ImageCard
+          data={data[3]}
+          checked={checked}
+          onClick={() => i18n.changeLanguage("es")}
+        />
       </div>
       <div className={classes.button}>
-        <Button color="primary" variant="contained" size="large">
-          GObgfctfgh!
-        </Button>
+        <p>{t("header.hello")}</p>
+
+        <Link to="/pokemons">
+          <Button
+            color="primary"
+            variant="contained"
+            size="large"
+            className={classes.size}
+          >
+            GO!
+          </Button>
+        </Link>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, IconButton, Toolbar } from "@material-ui/core";
+import { IconButton, Toolbar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import styled from "@emotion/styled";
 
@@ -17,10 +17,11 @@ const useStyles = makeStyles((theme) => ({
   },
   appbarTitle: {
     flexGrow: "1",
-    color: "rgb(223, 82, 64)",
+    color: "rgb(220, 10, 45)",
   },
   icon: {
     fontSize: "2rem",
+    color: "#000000",
   },
 }));
 export default function NavBar() {
