@@ -1,0 +1,74 @@
+.container {
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.details {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0px 10px;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.details-inside {
+  padding-bottom: 2rem;
+}
+.button-close {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+}
+.power {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 25px;
+  text-decoration: underline blue;
+}
+.pokemons {
+  display: flex;
+  justify-content: flex-start;
+  color: blue;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 0px 10px;
+  padding-bottom: 1rem;
+  text-transform: capitalize;
+}
+.title {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+  .images {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0px 20px;
+    padding-bottom: 1rem;
+  }
+  .abilites {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+}

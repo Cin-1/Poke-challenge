@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { IconButton, Collapse, Box } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link as Scroll } from "react-scroll";
-import image from "./images/pokedex.gif";
+import image from "../Media/pokedex.gif";
 import Grid from "@material-ui/core/Grid";
 import { useTranslation } from "react-i18next";
 

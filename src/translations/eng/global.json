@@ -1,8 +1,22 @@
 {
-    "header": {
-        "hello": "hello"
-    },
     "main": {
-        "info": "my name is pokemon"
+        "title": "Welcome to",
+        "title2": "My",
+        "title3": "PokeApp",
+        "button": "GO!"
+    },
+    "mode": {
+        "card0": "Light Mode",
+        "card1": "Dark Mode",
+        "card2": "English",
+        "card3": "Spanish"
+    },
+    "pokedex": {
+        "info": "More info",
+        "stats": "Stats",
+        "Abilities": "Stats",
+        "Weight": "Weight",
+        "Type": "Tipe",
+        "close": "Close"
     }
 }

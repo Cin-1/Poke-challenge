@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import useDarkMode from "use-dark-mode";
 import Pokedex from "./Pokedex/Pokedex";
-import { getPokemons, getPokemonData } from "../api";
+import { getPokemons, getPokemonData } from "./Pokedex/Fetch";
 
 const Pokemons = () => {
   const [t, i18n] = useTranslation("global");
@@ -32,30 +31,7 @@ const Pokemons = () => {
     fetchPokemons();
   }, [page]);
   return (
-    <div>
-      <button type="button" onClick={darkMode.disable}>
-        ☀
-      </button>
-      <button type="button" onClick={darkMode.enable}>
-        ☾
-      </button>
-      <p>{t("header.hello")}</p>
-      <Button
-        color="primary"
-        variant="contained"
-        size="large"
-        onClick={() => i18n.changeLanguage("es")}
-      >
-        espa!
-      </Button>
-      <Button
-        color="primary"
-        variant="contained"
-        size="large"
-        onClick={() => i18n.changeLanguage("eng")}
-      >
-        ingles!
-      </Button>
+    <div style={{ paddingTop: "45px" }}>
       <div>
         <Pokedex
           pokemons={pokemon}

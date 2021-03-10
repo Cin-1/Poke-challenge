@@ -1,8 +1,22 @@
 {
-    "header": {
-        "hello": "Hola"
-    },
     "main": {
-        "info": "latino latino"
+        "title": "Bienvenido a mi",
+        "title2": "App de",
+        "title3": "Pokemon",
+        "button": "Entrar!"
+    },
+    "mode": {
+        "card0": "Modo Claro",
+        "card1": "Modo Oscuro",
+        "card2": "Inglés",
+        "card3": "Español"
+    },
+    "pokedex": {
+        "info": "Más Info",
+        "stats": "Atributos",
+        "Abilities": "Habilidades",
+        "Weight": "Peso",
+        "Type": "Tipo",
+        "close": "Cerrar"
     }
 }

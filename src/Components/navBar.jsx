@@ -4,9 +4,8 @@ import { IconButton, Toolbar } from "@material-ui/core";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import styled from "@emotion/styled";
 import useSound from "use-sound";
-import poke from "./poke.mp3";
-import Fab from "@material-ui/core/Fab";
-import Tooltip from "@material-ui/core/Tooltip";
+import poke from "../Components/Media/poke.mp3";
+import { Link } from "react-router-dom";
 import MusicOffIcon from "@material-ui/icons/MusicOff";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appbarTitle: {
     flexGrow: "1",
+  },
+  link: {
+    textDecoration: "none",
     color: "rgb(220, 10, 45)",
   },
   icon: {
@@ -34,10 +36,6 @@ export default function NavBar() {
       setNavbar(false);
     }
   };
-  const handleClick = () => {
-    play() || stop();
-  };
-
   window.addEventListener("scroll", changeBackground);
 
   const [state, setState] = useState({
@@ -61,7 +59,9 @@ export default function NavBar() {
     <Nav className={navbar ? "bgactive" : null} id="navBar">
       <Toolbar>
         <h1 className={classes.appbarTitle}>
-          Poke<span className={classes.colorText}>dex.</span>
+          <Link to="/" className={classes.link}>
+            Poke<span className={classes.colorText}>dex.</span>
+          </Link>
         </h1>
         {state.playing ? (
           <IconButton>
