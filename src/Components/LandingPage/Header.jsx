@@ -5,6 +5,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link as Scroll } from "react-scroll";
 import image from "./images/pokedex.gif";
 import Grid from "@material-ui/core/Grid";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     color: "rgb(220, 10, 45)",
   },
   title: {
-    color: "#000000",
     [theme.breakpoints.down("sm")]: {
       paddingTop: "10rem",
       fontSize: "2rem",
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Header() {
   const classes = useStyles();
+  const [t, i18n] = useTranslation("global");
   const [checked, setChecked] = useState(false);
   useEffect(() => {
     setChecked(true);
@@ -60,8 +61,9 @@ export default function Header() {
             <Grid container items sm={5}>
               <Box display="flex" alignItems="center" ml={10}>
                 <h1 className={classes.title}>
-                  Welcome to <br />
-                  My<span className={classes.colorText}>PokeApp</span>
+                  {t("main.title")} <br />
+                  {t("main.title2")}
+                  <span className={classes.colorText}> {t("main.title3")}</span>
                 </h1>
               </Box>
             </Grid>

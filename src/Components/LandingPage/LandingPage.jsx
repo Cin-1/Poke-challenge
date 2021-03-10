@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "./Header";
-import ColorLang from "./ColorLang";
+import ColorLang from "./ShowCards";
 import image2 from "./images/pokegroup.jpg";
 import image1 from "./images/poke1.jpg";
 import { useTranslation } from "react-i18next";
