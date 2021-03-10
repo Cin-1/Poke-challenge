@@ -3,9 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Header from "./Header";
 import ColorLang from "./ColorLang";
 import image2 from "./images/pokegroup.jpg";
-import NavBar from "./navBar";
 import image1 from "./images/poke1.jpg";
-import { Button } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +29,6 @@ const Landing = () => {
 
   return (
     <div>
-      <NavBar />
       <Header />
       <div className={classes.options}>
         <ColorLang />

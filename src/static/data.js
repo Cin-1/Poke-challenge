@@ -1,13 +1,13 @@
 const data = [
   {
-    id: "light",
+    id: "1",
     title: "Light mode",
     imageUrl: "/assets/day.jpg",
     time: 1500,
     description: "lore ipsuium abdbd uiadbadjh-+",
   },
   {
-    id: "dark",
+    id: 2,
     title: "Dark mode",
     imageUrl: "/assets/night.jpg",
     time: 1500,

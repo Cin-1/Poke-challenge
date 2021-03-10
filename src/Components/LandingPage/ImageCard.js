@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Collapse } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
+import useDarkMode from "use-dark-mode";
 
 const useStyles = makeStyles({
   root: {
@@ -35,19 +36,10 @@ const useStyles = makeStyles({
   },
 });
 
-function ImageCard({ data, checked, darkMode }) {
+function ImageCard({ data, checked }) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(false);
   const [t, i18n] = useTranslation("global");
-
-  const handleChange = (e) => {
-    if (e === "light") {
-      setValue(true);
-    }
-    if (e === "dark") {
-      setValue(true);
-    }
-  };
+  const darkMode = useDarkMode(false);
 
   return (
     <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
@@ -57,7 +49,8 @@ function ImageCard({ data, checked, darkMode }) {
           image={data.imageUrl}
           title="options"
         />
-        <CardContent onClick={() => i18n.changeLanguage(data.id)}>
+        {/*i18n.changeLanguage(data.id)||*/}
+        <CardContent onClick={darkMode.enable}>
           <Typography
             gutterBottom
             variant="h5"

@@ -41,16 +41,8 @@ export default function ColorLang() {
       <div className={classes.root} id="select-option">
         <ImageCard data={data[0]} checked={checked} />
         <ImageCard data={data[1]} checked={checked} />
-        <ImageCard
-          data={data[2]}
-          checked={checked}
-          onClick={() => i18n.changeLanguage("eng")}
-        />
-        <ImageCard
-          data={data[3]}
-          checked={checked}
-          onClick={() => i18n.changeLanguage("es")}
-        />
+        <ImageCard data={data[2]} checked={checked} />
+        <ImageCard data={data[3]} checked={checked} />
       </div>
       <div className={classes.button}>
         <p>{t("header.hello")}</p>
