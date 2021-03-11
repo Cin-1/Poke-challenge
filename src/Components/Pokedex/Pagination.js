@@ -7,7 +7,7 @@ const Pagination = (props) => {
   const { leftClick, rightClick, page, totalPages } = props;
   return (
     <Container>
-      <Box justifyContent="center" display="flex">
+      <Box justifyContent="center" display="flex" pt={3}>
         <button onClick={leftClick}>
           <ArrowBackIcon />
         </button>
