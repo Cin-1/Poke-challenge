@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import useDarkMode from "use-dark-mode";
 import Pokedex from "./Pokedex/Pokedex";
 import { getPokemons, getPokemonData } from "./Pokedex/Fetch";
 
 const Pokemons = () => {
-  const [t, i18n] = useTranslation("global");
-  const darkMode = useDarkMode(false);
   const [pokemon, setPokemon] = useState([]);
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
