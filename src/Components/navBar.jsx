@@ -8,22 +8,6 @@ import poke from "../Components/Media/poke.mp3";
 import { Link } from "react-router-dom";
 import MusicOffIcon from "@material-ui/icons/MusicOff";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    fontFamily: "Nunito",
-  },
-  appbarTitle: {
-    flexGrow: "1",
-  },
-  link: {
-    textDecoration: "none",
-    color: "rgb(220, 10, 45)",
-  },
-  icon: {
-    fontSize: "2rem",
-    color: "#000000",
-  },
-}));
 export default function NavBar() {
   const classes = useStyles();
   const [navbar, setNavbar] = useState(false);
@@ -86,3 +70,19 @@ const Nav = styled.nav`
   transition: all 0.3s ease;
   z-index: 99995;
 `;
+const useStyles = makeStyles((theme) => ({
+  root: {
+    fontFamily: "Nunito",
+  },
+  appbarTitle: {
+    flexGrow: "1",
+  },
+  link: {
+    textDecoration: "none",
+    color: "rgb(220, 10, 45)",
+  },
+  icon: {
+    fontSize: "2rem",
+    color: "#000000",
+  },
+}));

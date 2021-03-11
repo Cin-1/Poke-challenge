@@ -13,10 +13,10 @@
     },
     "pokedex": {
         "info": "Más Info",
-        "stats": "Atributos",
-        "Abilities": "Habilidades",
-        "Weight": "Peso",
-        "Type": "Tipo",
+        "stats": "Atributos:",
+        "Abilities": "Habilidades:",
+        "Weight": "Peso:",
+        "Type": "Tipo:",
         "close": "Cerrar"
     }
 }
